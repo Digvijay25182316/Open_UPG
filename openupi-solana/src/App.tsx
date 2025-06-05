@@ -16,6 +16,8 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl, Connection, PublicKey } from "@solana/web3.js";
 import "@solana/wallet-adapter-react-ui/styles.css";
+import Landing from "./pages/Landing";
+import Header from "./components/Header/Header";
 
 const network = WalletAdapterNetwork.Devnet;
 const endpoint = clusterApiUrl(network);
@@ -105,22 +107,26 @@ const WalletActions: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>
-          <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
-            <h1 className="text-4xl font-bold mb-6 text-center text-orange-600">
-              OpenUPI on Solana
-            </h1>
-            <WalletMultiButton className="mb-6" />
-            <WalletActions />
-            <footer className="mt-10 text-center text-gray-400 text-xs">
-              Powered by Solana Devnet
-            </footer>
-          </div>
-        </WalletModalProvider>
-      </WalletProvider>
-    </ConnectionProvider>
+    // <ConnectionProvider endpoint={endpoint}>
+    //   <WalletProvider wallets={wallets} autoConnect>
+    //     <WalletModalProvider>
+    //       <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
+    //         <h1 className="text-4xl font-bold mb-6 text-center text-orange-600">
+    //           OpenUPI on Solana
+    //         </h1>
+    //         <WalletMultiButton className="mb-6" />
+    //         <WalletActions />
+    //         <footer className="mt-10 text-center text-gray-400 text-xs">
+    //           Powered by Solana Devnet
+    //         </footer>
+    //       </div>
+    //     </WalletModalProvider>
+    //   </WalletProvider>
+    // </ConnectionProvider>
+    <div className={""} >
+      <Header />
+      <Landing />
+    </div >
   );
 };
 
