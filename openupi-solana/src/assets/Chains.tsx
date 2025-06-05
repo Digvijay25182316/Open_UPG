@@ -16,10 +16,6 @@ export const blockchains = [
         logo: "https://cdn.jsdelivr.net/gh/simplr-sh/coin-logos/images/cardano/large.png",
     },
     {
-        name: "Polygon",
-        logo: "https://cdn.jsdelivr.net/gh/simplr-sh/coin-logos/images/polygon/large.png",
-    },
-    {
         name: "BNB Chain",
         logo: "https://cdn.jsdelivr.net/gh/simplr-sh/coin-logos/images/binancecoin/large.png",
     },
