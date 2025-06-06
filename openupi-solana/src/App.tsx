@@ -17,8 +17,11 @@
 // import { clusterApiUrl, Connection } from "@solana/web3.js";
 // import { clusterApiUrl, Connection, PublicKey } from "@solana/web3.js";
 import "@solana/wallet-adapter-react-ui/styles.css";
-import Landing from "./pages/Landing";
-import Header from "./components/Header/Header";
+import LandingContainer from "./components/LandingContainer";
+import { BrowserRouter } from "react-router-dom";
+import { NavigationContainer } from "./Configurations/Routes";
+import { AuthProvider } from "./context/AuthContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 // const network = WalletAdapterNetwork.Devnet;
 // const endpoint = clusterApiUrl(network);
@@ -124,11 +127,25 @@ const App: React.FC = () => {
     //     </WalletModalProvider>
     //   </WalletProvider>
     // </ConnectionProvider>
-    <div className={""} >
-      <Header />
-      <Landing />
-    </div >
+    <BrowserRouter>
+      <Wrapper>
+        <NavigationContainer />
+      </Wrapper>
+    </BrowserRouter>
+
   );
 };
+
+const Wrapper = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <AuthProvider>
+      <ThemeProvider>
+        <LandingContainer>
+          {children}
+        </LandingContainer>
+      </ThemeProvider>
+    </AuthProvider>
+  )
+}
 
 export default App;

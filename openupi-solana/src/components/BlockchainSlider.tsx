@@ -1,7 +1,7 @@
-// components/BlockchainSlider.tsx
+"use client"
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { blockchains } from "../../assets/Chains";
+import { blockchains } from "../assets/Chains";
 
 export default function BlockchainLogoCarousel() {
     const [index, setIndex] = useState(0);
@@ -25,7 +25,7 @@ export default function BlockchainLogoCarousel() {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 1.05 }}
                         transition={{ duration: 0.8 }}
-                        className="h-64 w-64 object-contain"
+                        className="h-25 w-25 lg:h-40 lg:w-40 object-contain"
                     />
                     <p className="text-white text-xl font-bold">{blockchains[index]?.name}</p>
                 </div>
