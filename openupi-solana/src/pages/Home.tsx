@@ -8,6 +8,7 @@ import {
     QrCodeIcon,
     GiftIcon,
 } from '@heroicons/react/24/solid';
+import TransactionCard from "../components/TransactionCard";
 function HomePage() {
     const payOptions = [
         { id: 'contact', label: 'Pay Contact', icon: UserIcon, path: "#" },
@@ -20,8 +21,10 @@ function HomePage() {
     return (
         <div        >
             <div className="relative w-full h-[250px] bg-cover bg-center brightness-90" style={{ backgroundImage: `url(${HeroImage})` }}>
-                <div className="absolute inset-0 bg-black/70 pt-10">
-                    something
+                <div className="absolute inset-0 bg-black/70 pt-14">
+                    <div className="flex items-center w-full h-full">
+                        <TransactionCard />
+                    </div>
                 </div>
             </div>
             <div className="px-4 py-6">
