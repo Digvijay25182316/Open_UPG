@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {
   PaperAirplaneIcon,
   UserIcon,
@@ -12,23 +12,23 @@ import {
 
 // import FullScreenModal from "../components/modal";
 
-const dummyContacts = [
-  { id: 1, name: "Digvijay Edake", phone: "+91 98765 43210" },
-  { id: 2, name: "Arya Sharma", phone: "+91 91234 56789" },
-  { id: 3, name: "Sonal Raj", phone: "+91 99887 76543" },
-  { id: 4, name: "Ravi Mehta", phone: "+91 90000 11111" },
-  { id: 5, name: "Nisha Rao", phone: "+91 98989 67676" },
-  // Add more if needed
-];
+// const dummyContacts = [
+//   { id: 1, name: "Digvijay Edake", phone: "+91 98765 43210" },
+//   { id: 2, name: "Arya Sharma", phone: "+91 91234 56789" },
+//   { id: 3, name: "Sonal Raj", phone: "+91 99887 76543" },
+//   { id: 4, name: "Ravi Mehta", phone: "+91 90000 11111" },
+//   { id: 5, name: "Nisha Rao", phone: "+91 98989 67676" },
+//   // Add more if needed
+// ];
 
 export default function PayContactPage() {
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm] = useState("");
 
-  const filteredContacts = dummyContacts.filter(
-    (contact) =>
-      contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      contact.phone.includes(searchTerm)
-  );
+  // const filteredContacts = dummyContacts.filter(
+  //   (contact) =>
+  //     contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     contact.phone.includes(searchTerm)
+  // );
 
   return (
     <>
