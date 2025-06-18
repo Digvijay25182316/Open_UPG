@@ -19,7 +19,7 @@ function HomePage() {
         { id: 'rewards', label: 'Rewards', icon: GiftIcon, path: "#" },
     ];
     return (
-        <div        >
+        <div>
             <div className="relative w-full h-[250px] bg-cover bg-center brightness-90" style={{ backgroundImage: `url(${HeroImage})` }}>
                 <div className="absolute inset-0 bg-black/70 pt-14">
                     <div className="flex items-center w-full h-full">
